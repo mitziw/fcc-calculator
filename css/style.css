@@ -1,0 +1,284 @@
+/*
+ * Globals
+ */
+
+
+/* Links */
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+
+/* Custom default button */
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: 1px #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/340482/DeathtoStock_Wired1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Padding for spacing */
+
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .75);
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+
+/*
+==================================
+			GRID
+==================================
+*/
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  display: Table-cell;
+  content: '';
+}
+
+*:after {
+  clear: both;
+}
+
+.container {
+    display: inline-block;
+    margin: 0 auto;
+    width: 350px;
+    padding: 10px;
+ border-style: solid;
+  border-width: 5px;
+  border-color: #000;
+  border-radius: 15px;
+  opacity: 0.7;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.calculator {
+	padding: 10px;
+	margin-top: 20px;
+	/*background-color: ;*/
+  border: 1px #000;
+	border-radius: 5px;
+	/*this is to remove space between divs that are inline-block*/
+	font-size: 0;
+}
+
+.calculator > input[type=text] {
+	width: 100%;	
+	height: 50px;
+  font-family: Orbitron, Sans-serif;
+	border: none;
+	background-color: #fff;	
+	text-align: right;
+	font-size: 30px;
+	padding-right: 10px;
+  color:#000;
+}
+
+.calculator .row { 
+	margin-top: 10px;
+}
+
+.calculator .key {
+	width: 75px;
+	display: inline-block;
+	background-color: black;
+	color: white;
+	font-size: 2rem;
+	margin-right: 5px;
+	border-radius: 5px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.calculator .key:hover{
+	cursor: pointer;
+}
+
+.key.last{
+	margin-right: 0px;
+} 
+
+.key.action {
+	background-color: #646060;
+}
+
+
+footer {
+  font-style: italic;
+  padding-top: 35px;
+  text-align: center;
+  font-size: 10px;
+}
